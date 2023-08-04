@@ -46,7 +46,9 @@ export default function App() {
     <div className="app">
       <div className="sidebar">
         <FriendsList friends={friends} />
+
         {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
+
         <Button onClick={handleShowAddFriend}>
           {showAddFriend ? "Close" : "Add Friend"}
         </Button>
@@ -68,6 +70,7 @@ function FriendsList({ friends }) {
 }
 
 function Friend({ friend }) {
+  // console.log(friend);
   return (
     <>
       <li>
